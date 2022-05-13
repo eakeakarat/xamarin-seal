@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{E6459454-02FD-43CC-BEB6-B704E2768264}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="adtest/MainPage.xaml.cs">
+    <Files>
+      <File FileName="adtest/MainPage.xaml.cs" Line="62" Column="13" />
+      <File FileName="adtest/MainPage.xaml" Line="9" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="adtest" expanded="True">
+            <Node name="adtest" expanded="True">
+              <Node name="MainPage.xaml" expanded="True">
+                <Node name="MainPage.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.adtest.Android PreferredExecutionTarget="Android.API30" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

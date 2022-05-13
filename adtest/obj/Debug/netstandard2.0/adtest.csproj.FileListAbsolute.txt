@@ -1,0 +1,16 @@
+/Users/eakarat/Projects/adtest/adtest/bin/Debug/netstandard2.0/adtest.deps.json
+/Users/eakarat/Projects/adtest/adtest/bin/Debug/netstandard2.0/adtest.dll
+/Users/eakarat/Projects/adtest/adtest/bin/Debug/netstandard2.0/ref/adtest.dll
+/Users/eakarat/Projects/adtest/adtest/bin/Debug/netstandard2.0/adtest.pdb
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.csproj.AssemblyReference.cache
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.AssemblyInfoInputs.cache
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.AssemblyInfo.cs
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.csproj.CoreCompileInputs.cache
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.dll
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/ref/adtest.dll
+/Users/eakarat/Projects/adtest/adtest/obj/Debug/netstandard2.0/adtest.pdb
+/Users/eakarat/Projects/adtest/adtest/bin/Debug/netstandard2.0/libsealc.dylib
