@@ -23,24 +23,39 @@ namespace adtest
         public MainPage()
         {
             InitializeComponent();
+            // BFV | CKKS 
+            bool BFV = true;
 
-            //CKKS
-            //using EncryptionParameters parms = new EncryptionParameters(SchemeType.CKKS);
-            //ulong polyModulusDegree = 8192;
+            ulong polyModulusDegree;
+            EncryptionParameters parms;
 
-            //BFV
-            using EncryptionParameters parms = new EncryptionParameters(SchemeType.BFV);
-            ulong polyModulusDegree = 4096;
+            if (BFV)
+            {
+                //BFV
+                parms = new EncryptionParameters(SchemeType.BFV);
+                polyModulusDegree = 4096;
+            }
+            else
+            {
+                //CKKS
+                parms = new EncryptionParameters(SchemeType.CKKS);
+                polyModulusDegree = 8192;
+            }
 
             parms.PolyModulusDegree = polyModulusDegree;
 
-            //CKKS
-            //parms.CoeffModulus = CoeffModulus.Create(polyModulusDegree, new int[] { 60, 40, 40, 60 });
-            //parms.PlainModulus = new Modulus(1024);
-
-            //BFV
-            parms.CoeffModulus = CoeffModulus.BFVDefault(polyModulusDegree);
-            parms.PlainModulus = PlainModulus.Batching(polyModulusDegree, 20);
+            if (BFV)
+            {
+                //BFV
+                parms.CoeffModulus = CoeffModulus.BFVDefault(polyModulusDegree);
+                parms.PlainModulus = PlainModulus.Batching(polyModulusDegree, 20);
+            }
+            else
+            {
+                //CKKS
+                parms.CoeffModulus = CoeffModulus.Create(polyModulusDegree, new int[] { 60, 40, 40, 60 });
+                parms.PlainModulus = new Modulus(1024);
+            }
 
             using SEALContext context = new SEALContext(parms);
             System.Console.WriteLine(context.KeyContextData.ParmsId);
@@ -54,11 +69,16 @@ namespace adtest
             encryptor = new Encryptor(context, publicKey);
             decryptor = new Decryptor(context, secretKey);
 
-            //CKKS
-            //encoder = new CKKSEncoder(context);
-
-            //BFV
-            batchEncoder = new BatchEncoder(context);
+            if (BFV)
+            {
+                //BFV
+                batchEncoder = new BatchEncoder(context);
+            }
+            else
+            {
+                //CKKS
+                encoder = new CKKSEncoder(context);
+            }
 
             using Plaintext plainA = new Plaintext(),
                            plainB = new Plaintext(),
@@ -67,46 +87,62 @@ namespace adtest
                 cipherB = new Ciphertext(),
                 cipherC = new Ciphertext();
 
-            //CKKS
-            //encoder.Encode(2, scale, plainA);
-            //encoder.Encode(3, scale, plainB);
-            //encryptor.Encrypt(plainA, cipherA);
-            //encryptor.Encrypt(plainB, cipherB);
 
-            //BFV
-            ulong[] a = { 1,2,3 }, b = { 2,3,4 };
-            batchEncoder.Encode(a, plainA);
-            batchEncoder.Encode(b, plainB);
-            encryptor.Encrypt(plainA, cipherA);
-            encryptor.Encrypt(plainB, cipherB);
 
-            evaluator.Multiply(cipherA, cipherB, cipherC);
+            if (BFV)
+            {
+                //BFV
+                ulong[] a = { 1, 2, 3 }, b = { 2, 3, 4 }, c = { 2, 2, 2 };
+                batchEncoder.Encode(a, plainA);
+                batchEncoder.Encode(b, plainB);
+                batchEncoder.Encode(c, plainC);
+                encryptor.Encrypt(plainA, cipherA);
+                encryptor.Encrypt(plainB, cipherB);
+                encryptor.Encrypt(plainC, cipherC);
+            }
+            else
+            {
+                //CKKS
+                encoder.Encode(2, scale, plainA);
+                encoder.Encode(3, scale, plainB);
+                encoder.Encode(4, scale, plainC);
+                encryptor.Encrypt(plainA, cipherA);
+                encryptor.Encrypt(plainB, cipherB);
+                encryptor.Encrypt(plainC, cipherC);
+            }
+
+            evaluator.Add(cipherA, cipherB, cipherA); // A = A + B ==> {3,5,7} || 5
+            evaluator.Multiply(cipherA, cipherC, cipherC); // C = A * C ==> {6,10,14} || 20
             decryptor.Decrypt(cipherC, plainC);
 
             String resultSTR = "";
 
-            //CKKS
-            //ICollection<double> l = new List<double>();
-            //encoder.Decode(plainC, l);
-            //foreach (double x in l)
-            //{
-            //    string tmp = x.ToString();
-            //    resultSTR += tmp + '\n';
-
-            //}
-
-            //BFV
-            List<ulong> l = new List<ulong>();
-            batchEncoder.Decode(plainC, l);
-            foreach (ulong x in l)
+            if (BFV)
             {
-                string tmp = x.ToString();
-                resultSTR += tmp + '\n';
+                //BFV
+                List<ulong> l = new List<ulong>();
+                batchEncoder.Decode(plainC, l);
+                foreach (ulong x in l)
+                {
+                    string tmp = x.ToString();
+                    resultSTR += tmp + '\n';
+                }
+            }
+            else
+            {
+                //CKKS
+                ICollection<double> l = new List<double>();
+                encoder.Decode(plainC, l);
+                foreach (double x in l)
+                {
+                    string tmp = x.ToString();
+                    resultSTR += tmp + '\n';
+
+                }
+
             }
 
             result.Text = resultSTR;
-
-
 
         }
 
