@@ -1,1 +1,1 @@
-<Devices><Device id="emulator-5554"><ResultingAbi>x86_64</ResultingAbi><SdkVersion>30</SdkVersion></Device></Devices>
+<Devices><Device id="emulator-5554"><ResultingAbi>x86_64</ResultingAbi><SdkVersion>30</SdkVersion></Device><Device id="emulator-5554"><ResultingAbi>x86_64</ResultingAbi><ToolsAbi /><SdkVersion>30</SdkVersion><LongOutput>product:sdk_phone_x86_64;model:Android_SDK_built_for_x86_64;device:generic_x86_64;transport_id:9</LongOutput></Device></Devices>

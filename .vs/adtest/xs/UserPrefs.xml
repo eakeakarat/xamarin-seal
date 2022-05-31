@@ -1,17 +1,24 @@
-﻿<Properties StartupConfiguration="{E6459454-02FD-43CC-BEB6-B704E2768264}|Default">
+﻿<Properties StartupConfiguration="{8D8E3498-24B2-4701-BE18-568474AFF7D3}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="adtest/MainPage.xaml.cs">
     <Files>
-      <File FileName="adtest/MainPage.xaml.cs" Line="62" Column="13" />
-      <File FileName="adtest/MainPage.xaml" Line="9" Column="17" />
+      <File FileName="adtest/MainPage.xaml.cs" Line="20" Column="29" />
+      <File FileName="adtest/MainPage.xaml" />
+      <File FileName="adtest.iOS/Main.cs" />
+      <File FileName="adtest.iOS/Properties/AssemblyInfo.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="adtest" expanded="True">
             <Node name="adtest" expanded="True">
+              <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True">
                 <Node name="MainPage.xaml.cs" selected="True" />
               </Node>
+            </Node>
+            <Node name="adtest.Android" expanded="True" />
+            <Node name="adtest.iOS" expanded="True">
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -21,6 +28,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.adtest.Android PreferredExecutionTarget="Android.API30" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.adtest.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A04A4958-752D-4BB9-8BF9-06CB35C7929E" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
