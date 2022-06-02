@@ -9,7 +9,7 @@
         </Frame>
         <Entry x:Name="entry1" Placeholder="Input1" HorizontalTextAlignment="Center" />
         <Entry x:Name="entry2" Placeholder="Input2" HorizontalTextAlignment="Center" />
-        <Button x:Name="submit" Text="BUTTON" Clicked="submit_Clicked" />
+        <!--<Button x:Name="submit" Text="BUTTON" Clicked="submit_Clicked" />-->
         <Label x:Name="result" Text="Result" HorizontalTextAlignment="Center"/>
     </StackLayout>
 

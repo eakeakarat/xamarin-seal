@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cmkPdicM0Hdise4rlElwbtRMKEMCVDy79Dqt1SD/jqZ4j2M4hQFfp4JugwZp7nM/dxIwMr0mLBCkU8GLRT1XZA==",
+  "dgSpecHash": "oi/INBZcfJIHDzIrA4EOgSOBSJORY9hgUsdkYoWFClWzyLKXnfvQE3js0MRsxqzFS06449jhm0Q0dO7oVm2a6Q==",
   "success": true,
   "projectFilePath": "/Users/eakarat/Projects/adtest/adtest/adtest.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,8 @@
     "/Users/eakarat/.nuget/packages/microsoft.research.sealnet/4.0.0/microsoft.research.sealnet.4.0.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/Users/eakarat/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
-    "/Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2401/xamarin.forms.5.0.0.2401.nupkg.sha512"
+    "/Users/eakarat/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

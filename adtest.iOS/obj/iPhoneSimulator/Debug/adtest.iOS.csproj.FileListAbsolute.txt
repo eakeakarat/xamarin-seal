@@ -58,8 +58,8 @@
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/_ProcessedBundleResourcesPath.items
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/_ProcessedContentPath.items
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/
+/Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.csproj.AssemblyReference.cache
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.csproj.CoreCompileInputs.cache
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.csproj.CopyComplete
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.exe
 /Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.pdb
-/Users/eakarat/Projects/adtest/adtest.iOS/obj/iPhoneSimulator/Debug/adtest.iOS.csproj.AssemblyReference.cache

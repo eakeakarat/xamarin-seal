@@ -1,24 +1,21 @@
 ﻿<Properties StartupConfiguration="{8D8E3498-24B2-4701-BE18-568474AFF7D3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="adtest/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="adtest.iOS/Info.plist">
     <Files>
-      <File FileName="adtest/MainPage.xaml.cs" Line="20" Column="29" />
-      <File FileName="adtest/MainPage.xaml" />
-      <File FileName="adtest.iOS/Main.cs" />
-      <File FileName="adtest.iOS/Properties/AssemblyInfo.cs" />
+      <File FileName="adtest/MainPage.xaml" Line="17" Column="1" />
+      <File FileName="adtest/MainPage.xaml.cs" Line="60" Column="57" />
+      <File FileName="adtest.iOS/Info.plist" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="adtest" expanded="True">
             <Node name="adtest" expanded="True">
-              <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
-            <Node name="adtest.Android" expanded="True" />
             <Node name="adtest.iOS" expanded="True">
               <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>

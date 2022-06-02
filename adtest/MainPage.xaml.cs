@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Microsoft.Research.SEAL;
-
 using System.IO;
 
 namespace adtest
@@ -14,11 +13,16 @@ namespace adtest
     public partial class MainPage : ContentPage
     {
         double scale = Math.Pow(2.0, 40);
+        EncryptionParameters parms;
+        BatchEncoder batchEncoder;
         CKKSEncoder encoder;
+        SEALContext context;
+        KeyGenerator keygen;
+        PublicKey publicKey;
+        SecretKey secretKey;
         Evaluator evaluator;
         Encryptor encryptor;
         Decryptor decryptor;
-        BatchEncoder batchEncoder;
 
         public MainPage()
         {
@@ -27,7 +31,6 @@ namespace adtest
             bool BFV = true;
 
             ulong polyModulusDegree;
-            EncryptionParameters parms;
 
             if (BFV)
             {
@@ -48,22 +51,19 @@ namespace adtest
             {
                 //BFV
                 parms.CoeffModulus = CoeffModulus.BFVDefault(polyModulusDegree);
-                parms.PlainModulus = PlainModulus.Batching(polyModulusDegree, 20);
+                 parms.PlainModulus = PlainModulus.Batching(polyModulusDegree, 20);
             }
             else
             {
                 //CKKS
                 parms.CoeffModulus = CoeffModulus.Create(polyModulusDegree, new int[] { 60, 40, 40, 60 });
-                parms.PlainModulus = new Modulus(1024);
+                 parms.PlainModulus = new Modulus(1024);
             }
 
-            using SEALContext context = new SEALContext(parms);
-            System.Console.WriteLine(context.KeyContextData.ParmsId);
-            System.Console.WriteLine("OKOK");
-
-            using KeyGenerator keygen = new KeyGenerator(context);
-            using SecretKey secretKey = keygen.SecretKey;
-            keygen.CreatePublicKey(out PublicKey publicKey);
+            context = new SEALContext(parms);
+            keygen = new KeyGenerator(context);
+            secretKey = keygen.SecretKey;
+            keygen.CreatePublicKey(out publicKey);
 
             evaluator = new Evaluator(context);
             encryptor = new Encryptor(context, publicKey);
@@ -80,7 +80,7 @@ namespace adtest
                 encoder = new CKKSEncoder(context);
             }
 
-            using Plaintext plainA = new Plaintext(),
+            Plaintext plainA = new Plaintext(),
                            plainB = new Plaintext(),
                            plainC = new Plaintext();
             Ciphertext cipherA = new Ciphertext(),
